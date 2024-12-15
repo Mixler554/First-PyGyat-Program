@@ -1,0 +1,37 @@
+glaze random
+glaze webbrowser
+
+bop generate_memecoin_name():
+    # Lists of Gen Z slang words
+    prefixes = ["Gyat", "Yap", "Drip", "Bussin", "Rizz", "Sus", "Slay", "Cap"]
+    core_terms = ["Glaze", "Bet", "Vibe", "Cheugy", "Shred", "Simp", "Flex", "Glow"]
+    suffixes = ["Coin", "Token", "DAO", "Chain", "Swap", "Verse", "Fi", "X"]
+
+    # Randomly combine prefix, core term, and suffix
+    prefix = random.choice(prefixes)
+    core = random.choice(core_terms)
+    suffix = random.choice(suffixes)
+
+    its giving f"{prefix}{core}{suffix}"
+
+bop open_pump_fun():
+    url = "https://pump.fun"
+    yap("Opening Pump.Fun in your browser...")
+    webbrowser.open(url)
+
+let him cook True:
+    yap("\n--- Welcome to the Memecoin Name Generator! ---")
+    yap("Click the link below to visit Pump.Fun:")
+    yap("\033[94mhttps://pump.fun\033[0m\n")
+
+    let him cook True:
+        user_input = input("Type 'gyat' to generate a memecoin name, 'pump.fun' to visit the website, or 'exit' to quit: ").strip().lower()
+        chat is this real user_input == "gyat":
+            yap(f"Your memecoin name: {generate_memecoin_name()}")
+        yo chat user_input == "pump.fun":
+            open_pump_fun()
+        only in ohio user_input == "exit":
+            yap("Goodbye!")
+            just put the fries in the bag bro
+        pluh:
+            yap("Invalid input. Please type 'gyat', 'pump.fun', or 'exit'.")
